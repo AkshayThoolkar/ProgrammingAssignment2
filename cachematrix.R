@@ -1,6 +1,7 @@
 ## The functions create a special matrix, compute its inverse and caches the inverse of the matrix
 
-## This function creates a special "matrix" object that can cache its inverse.
+## This function creates a special "matrix" object that can cache its inverse. Its agrgument is a numeric matrix.
+## The <<- operator is used to assign an abject from a different environment
 
 makeCacheMatrix <- function(x = matrix()) {
 		i <- NULL
@@ -19,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. It requires a numeric amtrix as its argument.
 ##If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
